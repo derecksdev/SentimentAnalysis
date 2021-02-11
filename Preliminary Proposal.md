@@ -20,7 +20,7 @@ The main components will be Python based and will include:
     - Python GUI libraries to present data plots and data graphs
 
 # High-level architecture diagram
-
+![alt text](https://github.com/derecksdev/SentimentAnalysis/blob/main/image.jpg?raw=true)
 # Technology
 A minimal system would be one that presents data on 1200 recent tweets from the last 7 days based on a given query.Possible valuable enhancements include:
     - Larger data collection
@@ -57,7 +57,7 @@ Leadership roles for the team include: (All team members will participate in all
 # Project Managemnt
 Our project is feasible and we plan to meet face-to-face two times a week
 Weekly Schedule:
-    - Week 1 Developing Twitter API Integration
+    - Week 1: Developing Twitter API Integration
     - Week 2: Developing ML Integration
     - Week 3: Developing Data Wrangling Integration
     - Week 4 & 5: Developing Frontend Integration
