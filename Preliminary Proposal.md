@@ -57,7 +57,7 @@ Leadership roles for the team include: (All team members will participate in all
 # Project Managemnt
 Our project is feasible and we plan to meet face-to-face two times a week
 Weekly Schedule:
-    - Week 1: Developing Twitter API Integration
+    - Week 1 Developing Twitter API Integration
     - Week 2: Developing ML Integration
     - Week 3: Developing Data Wrangling Integration
     - Week 4 & 5: Developing Frontend Integration
