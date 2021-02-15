@@ -44,14 +44,15 @@ Technologies include:
 No one on the team has built a system like this.
 Tools familiar to the team include:
 
-    - Python/OOP
-    - Tweepy/Twitter web APIs
-    - Machine learning practices
-    - Numpy & Pandas data wrangling libraries
-    - PyGUI graphic user interface library
+    - Python/OOP (All members)
+    - Tweepy/Twitter web APIs (Dereck and Nick)
+    - Machine learning practices (Anthony)
+    - Numpy & Pandas data wrangling libraries (Dereck and Anthony)
+    - PyGUI graphic user interface library (Anthony)
 Tools new to the team include:
 
     - TextBlob machine learning library
+    
 Leadership roles for the team include: (All team members will participate in all phases of development in some way)
 Backend Development:
 
