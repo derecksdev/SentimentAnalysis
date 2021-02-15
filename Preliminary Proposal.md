@@ -14,6 +14,7 @@ The primary customer is a business owner or a person with a social media presenc
 # Technology
 The software will be a desktop application that gathers tweets via Twitter’s web APIs, organizes relevant data, performs sentiment analysis via machine learning libraries and algorithms, and presents data via data plotting and data graphing libraries.
 The main components will be Python based and will include:
+
     - Twitter web API libraries for collecting tweets
     - Python machine learning library to perform sentiment analysis
     - Python data wrangling libraries to organize data
@@ -23,13 +24,16 @@ The main components will be Python based and will include:
 ![alt text](https://github.com/derecksdev/SentimentAnalysis/blob/main/image.jpg?raw=true)
 # Technology
 A minimal system would be one that presents data on 1200 recent tweets from the last 7 days based on a given query.Possible valuable enhancements include:
+
     - Larger data collection
     - Faster data collection
     - Older (more than 7 days) data collection
 Testing would include:
+
     - Testing of individual components (Technical Testing)
     - Testing overall effectiveness (Customer Value Testing)
 Technologies include:
+
     - Python 3.7
     - Tweepy (Twitter API wrapper library for Python)
     - TextBlob (Sentiment analysis machine learning library for Python)
@@ -39,31 +43,43 @@ Technologies include:
 # Team
 No one on the team has built a system like this.
 Tools familiar to the team include:
+
     - Python/OOP
     - Tweepy/Twitter web APIs
     - Machine learning practices
     - Numpy & Pandas data wrangling libraries
     - PyGUI graphic user interface library
 Tools new to the team include:
+
     - TextBlob machine learning library
 Leadership roles for the team include: (All team members will participate in all phases of development in some way)
- - Backend Development:
+Backend Development:
+
     - Twitter API setup and usage (Chris Romanelli)
     - ML library setup and usage (Anthony Sutherland)
     - Data parsing and wrangling (Dereck Stewart II)
-    - Frontend Development:
+Frontend Development:
+
     - Building GUI for graph and plot representation (Nick Mize)
 
 # Project Managemnt
 Our project is feasible and we plan to meet face-to-face two times a week
 Weekly Schedule:
-    - Week 1: Developing Twitter API Integration
-    - Week 2: Developing ML Integration
-    - Week 3: Developing Data Wrangling Integration
-    - Week 4 & 5: Developing Frontend Integration
+| Date              | Activity                                        | Goals                                                                    |
+|-------------------|-------------------------------------------------|--------------------------------------------------------------------------|
+| Thursday, Feb. 18 | Begin work on project.                          | Design minimal system to collect and analyze tweets               |
+| Friday, Feb. 26   | 1st sprint                                   | Add location data and/or Google Trends data         |
+| Thursday, Mar. 4  | Complete 1st iteration status report               |                                                                          |
+| Friday, Mar. 12   | 2nd sprint                                    | Add GUI integration           |
+| Thursday, Mar. 18 | Complete 2nd iteration status report             |                                                                          |
+| Friday, Mar. 26   | 3rd sprint                                   | Improve usability and make more user-friendly (help page?)  |
+| Thursday, Apr. 1  | Complete 3nd iteration status report                 |                                                                          |
+| Friday, Apr. 9    | 4th sprint                                    | Final improvements and fixes |
+| Thursday, Apr. 15 | Final project report/presentation |                                                                          |
 
 There are no regulatory or legal constraints nor ethical or social concerns. We will have access to data we need for the scope of our project.
 
 Descoping to a useful system includes:
+
     - Reducing the overall system
-        - ~500 tweets across a single day
+    - ~500 tweets across a single day
