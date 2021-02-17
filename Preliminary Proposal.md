@@ -69,14 +69,14 @@ Weekly Schedule:
 | Date              | Activity                                        | Goals                                                                    |
 |-------------------|-------------------------------------------------|--------------------------------------------------------------------------|
 | Thursday, Feb. 18 | Begin work on project.                          | Design minimal system to collect and analyze tweets               |
-| Friday, Feb. 26   | 1st sprint                                   | Add location data and/or Google Trends data         |
-| Thursday, Mar. 4  | Complete 1st iteration status report               |                                                                          |
-| Friday, Mar. 12   | 2nd sprint                                    | Add GUI integration           |
-| Thursday, Mar. 18 | Complete 2nd iteration status report             |                                                                          |
-| Friday, Mar. 26   | 3rd sprint                                   | Improve usability and make more user-friendly (help page?)  |
-| Thursday, Apr. 1  | Complete 3nd iteration status report                 |                                                                          |
-| Friday, Apr. 9    | 4th sprint                                    | Final improvements and fixes |
-| Thursday, Apr. 15 | Final project report/presentation |                                                                          |
+| Friday, Feb. 26   |                                    | Add location data and/or Google Trends data         |
+| Thursday, Mar. 4  | Complete 1st iteration status report (1st sprint)              |                                                                          |
+| Friday, Mar. 12   |                                   | Add GUI integration           |
+| Thursday, Mar. 18 | Complete 2nd iteration status report (2nd sprint)           |                                                                          |
+| Friday, Mar. 26   |                                   | Improve usability and make more user-friendly (help page?)  |
+| Thursday, Apr. 1  | Complete 3nd iteration status report (3rd sprint)               |                                                                          |
+| Friday, Apr. 9    |                                     | Final improvements and fixes |
+| Thursday, Apr. 15 | Final project report/presentation (4th sprint) |                                                                          |
 
 There are no regulatory or legal constraints nor ethical or social concerns. We will have access to data we need for the scope of our project.
 
