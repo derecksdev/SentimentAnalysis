@@ -21,7 +21,7 @@ The main components will be Python based and will include:
     - Python GUI libraries to present data plots and data graphs
 
 # High-level architecture diagram
-![alt text](https://github.com/derecksdev/SentimentAnalysis/main/image.jpg?raw=true)
+![alt text](https://github.com/derecksdev/CS340-21/SentimentAnalysis/blob/main/image.jpg?raw=true)
 # Technology
 A minimal system would be one that presents data on 1200 recent tweets from the last 7 days based on a given query.Possible valuable enhancements include:
 
