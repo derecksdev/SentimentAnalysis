@@ -2,6 +2,8 @@ from datetime import date
 import datetime
 import json
 import tweepy
+import pandas as pd
+import csv
 
 CONSUMER_KEY = 'YYK4UkrytnewbYPKw1Hw6kkmD'
 CONSUMER_SECRET = 'dOPBCTWg6NH8Y3yq7s822LwbJsdAvJFR1lbM8J9DqxaZAAiLUO'
@@ -27,6 +29,11 @@ for i in range(7):
 	#Change q pararmeter to fetch tweets of a different topic
 	#Change items parameter to fetch x amount of tweets for each date range
 	tweets = tweepy.Cursor(api.search, q="$GME", tweet_mode = "extended", since=dSince.strftime("%Y-%m-%d"), until=dUntil.strftime("%Y-%m-%d"), lang='en').items(2)
+	
+	# Anthony added this to make a dataframe for the machine learbing part 
+	#df = pd.DataFrame(data=[tweet.full_text for tweet in tweets], columns=['Tweet'])
+	#df.to_csv('data.csv')
+
 	i = 1
 	print(type(tweepy))
 	for tweet in tweets:
@@ -35,3 +42,4 @@ for i in range(7):
 		except AttributeError:
 			print(str(i) + ": " + tweet.full_text)
 		i = i + 1
+
