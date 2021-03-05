@@ -10,7 +10,6 @@ def get_text_pol(data):
     return TextBlob(data).sentiment.polarity
 
 df = pd.read_csv('data.csv')
-print(df)
 
 df['Subjectivity'] = df['Tweet'].apply(get_text_sub)
 df['Polarity'] = df['Tweet'].apply(get_text_pol)
