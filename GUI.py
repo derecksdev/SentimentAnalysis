@@ -2,6 +2,8 @@ from dearpygui.core import *
 from dearpygui.simple import *
 #import pullTweets.py
 import os
+#Don't forget to remove the testing images from the directory
+#and to import pullTweets as above(I think that'll work)
 
 #window settings
 set_main_window_size(1080, 980)
@@ -16,13 +18,13 @@ def callback_blank(sender, data):
     return
 
 def callback(sender, data):
-    #close all windows except main
+    #close all windows except the main search window to clear previous results
     wnds = get_windows()
     for wnd in wnds:
         if(wnd != "Sentiment Analysis"):
             delete_item(wnd)
 
-    #call search funtion with input
+    #call search method in pullTweets.py with iv as the search value
     with window("Sentiment Analysis"):
         iv = get_value("Input")
         #call pullTweets.py with q=iv
@@ -31,6 +33,9 @@ def callback(sender, data):
         results = []
         tabnames = []
         tabs = []
+        #change "." to wherever you end up storing the images
+        #currently, I'm checking if the file is a .png,
+        #but you can || other types or change it if you want.
         for root, dirs, files in os.walk("."):
             for file in files:
                 tname, extension = os.path.splitext(file)
@@ -44,6 +49,8 @@ def callback(sender, data):
             tabs.append(ti)
 
         #open new windows with result graphs
+        #the title of the windows will be the same as the filename without extension
+        #so save them with the name you want them to display under.
         i = 0
         h = int((940 / len(tabnames)) + 1)
 
