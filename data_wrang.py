@@ -21,7 +21,7 @@ def make_piechart(arr):
     ax1.pie(arr, labels=labels, autopct='%1.1f%%',
             shadow=True, startangle=90)
     ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-    plt.show()
+    plt.savefig('pie_char.png')
 
 
 def get_pol_sub(value, perc):
