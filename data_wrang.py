@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 import csv
 
-
 def convert_to_perc(perc):
     total = 0.0
     for i in perc:
@@ -21,7 +20,7 @@ def make_piechart(arr):
     ax1.pie(arr, labels=labels, autopct='%1.1f%%',
             shadow=True, startangle=90)
     ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-    plt.show()
+    plt.savefig('pie_char.png')
 
 
 def get_pol_sub(value, perc):
@@ -43,3 +42,11 @@ def get_text_pol(data):
     i = TextBlob(data).sentiment.polarity
     get_pol_sub(i, pol_arr)
     return i
+
+# This will get the amount of times a word has been used
+# Just need to find a way to pick a word that you want to check for 
+#def freq_of_words(data, word_to_check):
+ 
+ #   i = TextBlob(data)
+  #  i.word_counts[word_to_check]
+   # return i
