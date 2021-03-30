@@ -25,7 +25,7 @@ with open(filename, mode = 'w') as data:
 		dSince = datetime.datetime.now() - datetime.timedelta(days = i+1)
 		#Change q pararmeter to fetch tweets of a different topic
 		#Change items parameter to fetch x amount of tweets for each date range
-		tweets = tweepy.Cursor(api.search, q="$GME", tweet_mode = "extended", since=dSince.strftime("%Y-%m-%d"), until=dUntil.strftime("%Y-%m-%d"), lang='en').items(4)
+		tweets = tweepy.Cursor(api.search, q="$GME", tweet_mode = "extended", since=dSince.strftime("%Y-%m-%d"), until=dUntil.strftime("%Y-%m-%d"), lang='en').items(1000)
 		i = 1
 		print(type(tweepy))
 		for tweet in tweets:
