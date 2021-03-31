@@ -20,8 +20,19 @@ def make_piechart(arr):
     ax1.pie(arr, labels=labels, autopct='%1.1f%%',
             shadow=True, startangle=90)
     ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-    plt.savefig('pie_char.png')
+    plt.savefig('piechart.png')
 
+def make_barchart(arr):
+    labels = ['Negative', 'Neutral', 'Positive']
+    ypos = np.arange(len(labels))
+    plt.title("Sentiment Analysis - Bar Chart")
+    plt.ylabel("Count")
+    plt.xticks(ypos, labels)
+    plt.bar(ypos, arr, label='Count')
+    plt.legend()
+
+    plt.savefig('barchart.png')
+    
 
 def get_pol_sub(value, perc):
     if value > 0:
