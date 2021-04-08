@@ -18,6 +18,11 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 
 api = tweepy.API(auth)
 
+#this is just for testing, eventually use this to set the search parameter
+def Search(srch):
+    print ("Searched for" + srch + "in backend")
+    #set a string = to search and then set q = to that string in line 41
+
 # the until parameter limits the collection to tweets sent just before the specified day (11:59pm the previous day)
 filename = "data.csv"
 sub_arr = [0, 0]
@@ -151,3 +156,5 @@ make_piechart(pol_arr, 0)
 
 make_barchart(sub_arr, 1)
 make_piechart(sub_arr, 1)
+
+#we need to call a method in GUI.py to tell it to load the images

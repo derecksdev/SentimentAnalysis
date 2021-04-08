@@ -1,9 +1,8 @@
 from dearpygui.core import *
 from dearpygui.simple import *
-#import pullTweets.py
+#import backend.py as be
 import os
-#Don't forget to remove the testing images from the directory
-#and to import pullTweets as above(I think that'll work)
+
 
 #window settings
 set_main_window_size(1080, 980)
@@ -27,9 +26,12 @@ def callback(sender, data):
     #call search method in pullTweets.py with iv as the search value
     with window("Sentiment Analysis"):
         iv = get_value("Input")
-        #call pullTweets.py with q=iv
+        #this calls the Search function in backend.py with the searched term as
+        #the parameter
+        #be.Search(iv)
         print("Searched for " + iv)
 
+#method to load images starts here
         results = []
         tabnames = []
         tabs = []
@@ -60,12 +62,14 @@ def callback(sender, data):
                 add_drawing(tb.name, width = 300, height = 300)
                 draw_image(tb.name, tb.result, [10, 10], pmax=[300, 300])
                 i += 1
-
+#method to load images ends here
 
 with window("Sentiment Analysis", width = 540, height = 940):
     set_window_pos("Sentiment Analysis", 0, 0)
     add_text("Enter search:")
     add_input_text("Input", label = "")
     add_button("Search", callback = callback, callback_data = lambda: get_value("Input"))
+    #add dropdown with 250, 500, 750, 1000 for number of Tweets
+    #add view for csv after search under the search bar
 
 start_dearpygui()
