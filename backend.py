@@ -19,35 +19,35 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 #this is just for testing, eventually use this to set the search parameter
-def Search(srch):
+def Search(srch, num_tweets):
     print ("Searched for" + srch + "in backend")
     #set a string = to search and then set q = to that string in line 41
 
-# the until parameter limits the collection to tweets sent just before the specified day (11:59pm the previous day)
-filename = "data.csv"
-sub_arr = [0, 0]
-pol_arr = [0, 0, 0]
+    # the until parameter limits the collection to tweets sent just before the specified day (11:59pm the previous day)
+    filename = "data.csv"
+    sub_arr = [0, 0]
+    pol_arr = [0, 0, 0]
 
-with open(filename, mode='w') as data:
-    fieldnames = ['index', 'info']
-    data_writer = csv.DictWriter(data, fieldnames=fieldnames)
-    data_writer.writeheader()
-    for i in range(7):
-        # This initializes dates such that the range is 1 day
-        dUntil = datetime.datetime.now() - datetime.timedelta(days=i)
-        dSince = datetime.datetime.now() - datetime.timedelta(days=i + 1)
-        # Change q pararmeter to fetch tweets of a different topic
-        # Change items parameter to fetch x amount of tweets for each date range
-        tweets = tweepy.Cursor(api.search, q="twitch", tweet_mode="extended", since=dSince.strftime("%Y-%m-%d"),
-                               until=dUntil.strftime("%Y-%m-%d"), lang='en').items(143)
-        i = 1
-        # print(type(tweepy))
-        for tweet in tweets:
-            try:
-                data_writer.writerow({'index': i, 'info': tweet.retweeted_status.full_text.encode('utf-8')})
-            except AttributeError:
-                data_writer.writerow({'index': i, 'info': tweet.full_text.encode('utf-8')})
-            i = i + 1
+    with open(filename, mode='w') as data:
+        fieldnames = ['index', 'info']
+        data_writer = csv.DictWriter(data, fieldnames=fieldnames)
+        data_writer.writeheader()
+        for i in range(7):
+            # This initializes dates such that the range is 1 day
+            dUntil = datetime.datetime.now() - datetime.timedelta(days=i)
+            dSince = datetime.datetime.now() - datetime.timedelta(days=i + 1)
+            # Change q pararmeter to fetch tweets of a different topic
+            # Change items parameter to fetch x amount of tweets for each date range
+            tweets = tweepy.Cursor(api.search, q=srch, tweet_mode="extended", since=dSince.strftime("%Y-%m-%d"),
+                                until=dUntil.strftime("%Y-%m-%d"), lang='en').items(num_tweets/7)
+            i = 1
+            # print(type(tweepy))
+            for tweet in tweets:
+                try:
+                    data_writer.writerow({'index': i, 'info': tweet.retweeted_status.full_text.encode('utf-8')})
+                except AttributeError:
+                    data_writer.writerow({'index': i, 'info': tweet.full_text.encode('utf-8')})
+                i = i + 1
 
 # Makes a percentage out of the totals for each category
 # Neural, Negative, Positive OR Objective, Subjective
@@ -147,14 +147,15 @@ df = pd.read_csv('data.csv')
 df['Subjectivity'] = df['info'].apply(get_text_sub)
 df['Polarity'] = df['info'].apply(get_text_pol)
 
-print(sub_arr)
-print(pol_arr)
-pol_arr_count = pol_arr
+#print(sub_arr)
+#print(pol_arr)
+#pol_arr_count = pol_arr
 
-make_barchart(pol_arr, 0)
-make_piechart(pol_arr, 0)
+def make_charts():
+    make_barchart(pol_arr, 0)
+    make_piechart(pol_arr, 0)
 
-make_barchart(sub_arr, 1)
-make_piechart(sub_arr, 1)
+    make_barchart(sub_arr, 1)
+    make_piechart(sub_arr, 1)
 
 #we need to call a method in GUI.py to tell it to load the images
